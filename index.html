@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- displays site properly based on user's device -->
 
 		<link
 			rel="icon"
@@ -11,58 +10,91 @@
 			sizes="32x32"
 			href="./images/favicon-32x32.png"
 		/>
-
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+			integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+			crossorigin=""
+		/>
+		<script
+			defer
+			src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+			integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+			crossorigin=""
+		></script>
+		<link rel="stylesheet" href="css/main.css" />
+		<script defer src="js/script.js"></script>
 		<title>Frontend Mentor | IP Address Tracker</title>
 	</head>
+
 	<body>
 		<main class="content-wrapper">
 			<header class="header">
-				<h1 class="heading">IP Address Tracker</h1>
+				<div class="heading-container">
+					<h1 class="heading">IP Address Tracker</h1>
+				</div>
 
 				<form class="search">
-          <input type="text" class="search__field" placeholder="Search for any IP address or domain">
-          <button class="search__btn">
-            <svg class="search__icon" xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
-          </button>
-        </form>
+					<input
+						type="text"
+						class="search__field"
+						placeholder="Search for any IP address or domain"
+					/>
+					<button class="search__btn">
+						<svg
+							class="search__icon"
+							xmlns="http://www.w3.org/2000/svg"
+							width="11"
+							height="14"
+						>
+							<path
+								fill="none"
+								stroke="#FFF"
+								stroke-width="3"
+								d="M2 1l6 6-6 6"
+							/>
+						</svg>
+					</button>
+				</form>
 
-				<div class="info-panel">
+				<div class="info-panel hidden">
 					<div class="info-panel__card">
 						<p class="info-panel__title">IP address</p>
-						<h2 class="info-panel__data">192.212.174.101</h2>
+						<h2 id="ip" class="info-panel__data">192.212.174.101</h2>
 					</div>
 
-					<div class="separator"></div>
+					<div class="info-panel__separator"></div>
 
 					<div class="info-panel__card">
 						<p class="info-panel__title">Location</p>
-						<h2 class="info-panel__data">Brooklyn, NY 10001</h2>
+						<h2 id="location" class="info-panel__data">Brooklyn, NY 10001</h2>
 					</div>
 
-					<div class="separator"></div>
+					<div class="info-panel__separator"></div>
 
 					<div class="info-panel__card">
 						<p class="info-panel__title">Timezone</p>
-						<h2 class="info-panel__data">UTC -05:00</h2>
+						<h2 id="timezone" class="info-panel__data">UTC -05:00</h2>
 					</div>
 
-					<div class="separator"></div>
+					<div class="info-panel__separator"></div>
 
 					<div class="info-panel__card">
 						<p class="info-panel__title">ISP</p>
-						<h2 class="info-panel__data">SpaceX Starlink</h2>
+						<h2 id="isp" class="info-panel__data">SpaceX Starlink</h2>
 					</div>
-					<div class="separator"></div>
 				</div>
 			</header>
-      
-			<div id="map"></div>
+
+			<section class="map-section-container">
+				<div id="mapid" class="map-container hidden"></div>
+				<div class="attribution">
+					Challenge by
+					<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+						>Frontend Mentor</a
+					>. Coded by <a href="https://github.com/Fuyutami">Fuyutami</a>.
+				</div>
+			</section>
 		</main>
-		<!-- <div class="attribution">
-			Challenge by
-			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-				>Frontend Mentor</a
-			>. Coded by <a href="https://github.com/Fuyutami">Fuyutami</a>.
-		</div> -->
 	</body>
 </html>
