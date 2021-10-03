@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://your-solution-url.com)
-- Live Site URL: [Live site URL](https://fuyutami.github.io/FEM-ip-address-tracker/)
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/html-css-es6-flexbox-bem-sass-async-fetch-api-GZyzqE2h7)
+- Live Site URL: [Live site URL](https://fem-iptracker-fuyutami.netlify.app/)
 
 ## My process
 
