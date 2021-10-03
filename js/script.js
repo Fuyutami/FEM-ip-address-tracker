@@ -86,7 +86,7 @@ const toggleLoading = function () {
 			)
 	} else {
 		const markup = `
-				<img class="loader" src="images/loading-animation.gif"></img>
+				<img class="loader" src="images/loading-animation.gif" alt="loading"></img>
 		`
 		mapSectionContainer.insertAdjacentHTML('afterbegin', markup)
 	}
